@@ -1,5 +1,5 @@
 return {
-    {"folke/neodev.nvim"},
+    { "folke/neodev.nvim" },
     {
         "nvim-treesitter/nvim-treesitter",
         build = ":TSUpdate"
@@ -24,6 +24,20 @@ return {
         },
         config = function()
             require("fidget").setup()
+        end
+    },
+    {
+        'numToStr/Comment.nvim',
+        lazy = false,
+        config = function()
+            require('Comment').setup()
+        end
+    },
+    {
+        'stevearc/dressing.nvim',
+        opts = {},
+        config = function ()
+            require('dressing').setup({})
         end
     }
 }

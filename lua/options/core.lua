@@ -24,4 +24,12 @@ opt.foldlevelstart = 99
 opt.foldenable = true
 
 vim.cmd([[set cursorline ]])
--- vim.g.skip_ts_context_commentstring_module = true
+vim.g.skip_ts_context_commentstring_module = true
+
+vim.api.nvim_create_autocmd('TextYankPost', {
+  desc = 'Highlight when yanking (copying) text',
+  group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+})
