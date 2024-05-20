@@ -16,8 +16,6 @@ keymap.set("n", "<leader>]", ":tabnext<CR>")
 keymap.set("n", "<leader>[", ":tabprevious<CR>")
 keymap.set("n", "<leader>tx", ":tabclose<CR>")
 
--- keymap.set("n", "<leader>fm", "mpggVG=`p")
-
 keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
@@ -30,7 +28,8 @@ keymap.set("n", "<A-x>", "<C-x>")
 keymap.set("x", "<leader>p", '"_dp',{ desc = "paste without copy"})
 
 
-keymap.set("n", "<leader>e", ":Rex<CR>", { desc = "toggle NETRW"})
+keymap.set("n", "<leader>e", ":Explore<CR>", { desc = "open NETRW"})
+keymap.set("n", "<leader>E", ":Rex<CR>", { desc = "close NETRW"})
 
 keymap.set("n", "<leader>gl", ":LazyGit<CR>")
 
