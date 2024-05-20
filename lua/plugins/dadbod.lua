@@ -9,6 +9,6 @@ return {
         "kristijanhusak/vim-dadbod-ui",
     },
     keys = {
-        { "<leader>db", "<cmd>DBUIToggle", desc = "open DBUI"}
+        { "<leader>db", ":DBUIToggle<CR>", desc = "open DBUI"}
     }
 }
