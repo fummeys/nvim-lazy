@@ -27,11 +27,10 @@ keymap.set("n", "<leader>sO", ":set spell nospell<CR>") --spell check on
 keymap.set("n", "<A-a>", "<C-a>")
 keymap.set("n", "<A-x>", "<C-x>")
 
-keymap.set("x", "<leader>p", '"_dp')
+keymap.set("x", "<leader>p", '"_dp',{ desc = "paste without copy"})
 
 
-keymap.set("n", "<leader>e", ":E<CR>")
-keymap.set("n", "<leader>E", ":Rex<CR>")
+keymap.set("n", "<leader>e", ":Rex<CR>", { desc = "toggle NETRW"})
 
 keymap.set("n", "<leader>gl", ":LazyGit<CR>")
 
