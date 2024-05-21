@@ -33,7 +33,7 @@ return{
 
                 map('n', '<leader>hp', gitsigns.preview_hunk, { desc = "preview_hunk"})
                 map('n', '<leader>hb', function() gitsigns.blame_line{full=true} end,{ desc = "blame_line"})
-                map('n', '<leader>tb', gitsigns.toggle_current_line_blame, { desc= "toggle_current_line_blame"})
+                map('n', '<leader>ht', gitsigns.toggle_current_line_blame, { desc= "toggle_current_line_blame"})
                 map('n', '<leader>hd', gitsigns.diffthis,{ desc = "diffthis"})
 
             end

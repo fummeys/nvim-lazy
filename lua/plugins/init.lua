@@ -27,16 +27,9 @@ return {
         end
     },
     {
-        'numToStr/Comment.nvim',
-        lazy = false,
-        config = function()
-            require('Comment').setup()
-        end
-    },
-    {
         'stevearc/dressing.nvim',
         opts = {},
-        config = function ()
+        config = function()
             require('dressing').setup({})
         end
     }
