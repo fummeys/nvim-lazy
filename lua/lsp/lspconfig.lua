@@ -138,9 +138,15 @@ return {
             capabilities = capabilities
         })
 
-        nvim_lsp.jdtls.setup({})
+        nvim_lsp.jdtls.setup({
+            capabilities = capabilities
+        })
 
         nvim_lsp.tailwindcss.setup({
+            capabilities = capabilities
+        })
+
+        nvim_lsp.kotlin_language_server.setup({
             capabilities = capabilities
         })
     end,
