@@ -125,6 +125,7 @@ return {
                     schemas = {
                         ["https://json.schemastore.org/github-workflow.json"] = "/.github/workflows/*",
                         ["https://json.schemastore.org/pubspec.json"] = "pubspec.yaml",
+                        ["https://raw.githubusercontent.com/jesseduffield/lazygit/master/schema/config.json"] = "config.yml"
                     }
                 }
             }
