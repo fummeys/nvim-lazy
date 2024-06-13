@@ -1,4 +1,4 @@
-return{
+return {
     {
         "hrsh7th/nvim-cmp",
         event = 'InsertEnter',
@@ -6,7 +6,7 @@ return{
             {
                 "L3MON4D3/LuaSnip",
                 build = "make install_jsregexp",
-                dependencies = { 
+                dependencies = {
                     "rafamadriz/friendly-snippets",
                     config = function()
                         require('luasnip.loaders.from_vscode').lazy_load()
@@ -52,7 +52,7 @@ return{
                     { name = "buffer" },
                     { name = "path" },
                     { name = "luasnip" },
-                    { name = "vim-dadbod-completion"}
+                    { name = "vim-dadbod-completion" }
                 }),
 
                 formatting = {

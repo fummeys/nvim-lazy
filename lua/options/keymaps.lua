@@ -31,7 +31,7 @@ keymap.set("x", "<leader>p", '"_dp',{ desc = "paste without copy"})
 keymap.set("n", "<leader>e", ":Explore<CR>", { desc = "open NETRW"})
 keymap.set("n", "<leader>E", ":Rex<CR>", { desc = "close NETRW"})
 
-keymap.set("n", "<leader>gl", ":LazyGit<CR>")
+keymap.set("n", "<leader>gl", ":LazyGit<CR>", { desc = "LazyGit"})
 
 keymap.set("n", "]d", "<cmd>Lspsaga diagnostic_jump_next<CR>", { silent = true })
 keymap.set("n", "[d", "<cmd>Lspsaga diagnostic_jump_prev<CR>", { silent = true })
