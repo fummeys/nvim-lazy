@@ -143,5 +143,9 @@ return {
         nvim_lsp.kotlin_language_server.setup({
             capabilities = capabilities
         })
+
+        nvim_lsp.gopls.setup({
+            capabilities = capabilities
+        })
     end,
 }
