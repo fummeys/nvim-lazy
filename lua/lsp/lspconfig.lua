@@ -55,14 +55,7 @@ return {
         }
 
         nvim_lsp.lua_ls.setup({
-            capabilities = capabilities,
-            settings = {
-                Lua = {
-                    diagnostics = {
-                        globals = { "vim", "require" },
-                    }
-                }
-            }
+            capabilities = capabilities
         })
 
         nvim_lsp.nginx.setup({
