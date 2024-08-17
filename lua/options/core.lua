@@ -23,7 +23,7 @@ opt.foldlevel = 99   -- Using ufo provider need a large value, feel free to decr
 opt.foldlevelstart = 99
 opt.foldenable = true
 
-vim.cmd([[ set nowritebackup]])
+vim.cmd([[ set nowritebackup ]])
 vim.cmd([[set cursorline ]])
 vim.g.skip_ts_context_commentstring_module = true
 
