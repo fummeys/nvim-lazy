@@ -42,3 +42,10 @@ keymap.set("n", "gD", "<cmd>Lspsaga goto_definition<CR>", { silent = true })
 keymap.set("n", "<leader>o", "<cmd>Lspsaga outline<CR>", { silent = true })
 keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", { silent = true })
 keymap.set("n", "<leader>sc", "<cmd>Lspsaga show_cusor_diagnostics<CR>", { silent = true })
+
+-- TeleScope
+keymap.set("n", "<leader>fx", "<cmd>Telescope find_files find_command=rg,--ignore,--hidden,--files,-u<CR>", {
+    silent = true,
+    desc = 'find hidden files'
+})
+
