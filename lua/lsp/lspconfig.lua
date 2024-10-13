@@ -22,14 +22,15 @@ return {
 
                 -- Buffer local mappings.
                 -- local opts = { buffer = ev.buf }
-                local createopts = function (desc)
+                local createopts = function(desc)
                     return {
                         buffer = ev.buf,
                         desc = desc
                     }
                 end
                 vim.keymap.set("n", "<space>wa", vim.lsp.buf.add_workspace_folder, createopts("add_workspace_folder"))
-                vim.keymap.set("n", "<space>wr", vim.lsp.buf.remove_workspace_folder, createopts("remove_workspace_folder"))
+                vim.keymap.set("n", "<space>wr", vim.lsp.buf.remove_workspace_folder,
+                    createopts("remove_workspace_folder"))
                 vim.keymap.set("n", "<space>wl", function()
                     print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
                 end, createopts("list_workspace_folders"))
@@ -118,7 +119,8 @@ return {
                     schemas = {
                         ["https://json.schemastore.org/github-workflow.json"] = "/.github/workflows/*",
                         ["https://json.schemastore.org/pubspec.json"] = "pubspec.yaml",
-                        ["https://raw.githubusercontent.com/jesseduffield/lazygit/master/schema/config.json"] = "config.yml",
+                        ["https://raw.githubusercontent.com/jesseduffield/lazygit/master/schema/config.json"] =
+                        "config.yml",
                     }
                 }
             }
@@ -146,6 +148,22 @@ return {
 
         nvim_lsp.gopls.setup({
             capabilities = capabilities
+        })
+
+        nvim_lsp.sourcekit.setup({
+            capabilities = {
+                textDocument = {
+                    foldingRange = {
+                        dynamicRegistration = false,
+                        lineFoldingOnly = true,
+                    }
+                },
+                workspace = {
+                    didChangeWatchedFiles = {
+                        dynamicRegistration = true,
+                    },
+                }
+            }
         })
     end,
 }
